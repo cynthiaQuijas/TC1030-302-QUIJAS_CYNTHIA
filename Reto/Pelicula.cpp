@@ -3,30 +3,45 @@
 // Pelicula.cpp
 
 
-#include "Pelicula.hpp"
+#include <iostream>
+#include "video.hpp"
 
-// Métodos constructores
-Pelicula::Pelicula(){
-    oscares = 3;
+using namespace std;
 
+Video::Video(string _ID, string _titulo, Duracion _duracion, int _genero, int _calificacion){
+    ID           = _ID;
+    titulo       = _titulo;
+    duracion     = _duracion;
+    genero       = _genero;
+    calificacion = _calificacion;
 }
 
-Pelicula::Pelicula(int _oscares){
-        oscares = _oscares;
+void Video::impGenero(){
+    string genre;
+
+    switch(genero){
+        case 1:
+            genre = "accion";
+            break;
+        case 2:
+            genre = "comedia";
+            break;
+        case 3:
+            genre = "drama";
+            break;
     }
 
-// Métodos de modificadores (sets)
-void Pelicula::setOscares(int _oscares){
-    oscares = _oscares;
+    cout << genre;
 }
 
-// Métodos de acceso (gets)
-string Pelicula::getOscares(){
-    return oscares;
+void Video::mostrar(){
+    cout << "ID: " << ID << endl;
+    cout << "Nombre: " << titulo << endl;
+    cout << "Duracion: "; duracion.impHora();
+    cout << "Genero: "; impGenero(); cout << endl;
+    cout << "Calificacion: " << calificacion << endl;
 }
 
-
-// Otros métodos
-string Video::str(){
-    return to_string(oscares);
+void Video::calificar(double cal){
+    calificacion = (calificacion+cal)/2;
 }
