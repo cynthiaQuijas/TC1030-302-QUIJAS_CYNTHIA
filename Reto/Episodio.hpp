@@ -8,30 +8,21 @@
 #include <stdio.h>
 #include <iostream>
 #include <string>
+#include "Video.hpp"
 using namespace std;
 
-class Episodio{
-protected: 
-  string titulo;
-  int temporada;
-  int calificacion;
-
+class episodio: public video{
+private:
+  episodios[5]Episodio;
+  cantidad int
 public:
-  // Métodos constructores
-  Episodio();
-  Episodio(string titulo, int temporada, double calificacion);
-  string str();
+  setEpisodio(int,Episodio):void
+  setCantidad(int):void
+
+  getEpisodio(int):Episodio;
+  getCantidad()int;
   
-
-  // Métodos modificadores (sets)
-  void setTitulo(string);
-  void setTemporada(int);
-  void setCalificacion(int);
-
-  // Métodos constructores (gets)
-  string getTitulo();
-  int getTemporada();
-  int getCalificacion();
+calcularPromedio:double
 
 };
 
