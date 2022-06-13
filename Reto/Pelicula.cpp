@@ -1,29 +1,37 @@
 // Cynthia Cristal Quijas Flores
 // A01655996
-// Pelicula.cpp
+// Pelicula.hpp
+
+#ifndef Pelicula_hpp
+#define Pelicula_hpp
 
 
-#include "Pelicula.hpp"
-#include"Video.hpp"
-#include <iostream>
+#include <stdio.h>
+#include "Video.hpp"
 
-// Métodos Constructores (sets)
-Pelicula::Pelicula() : Video(){
-   oscares= 6;
-}
+class Pelicula : public Video {
 
-Pelicula::Pelicula(string _iD, string _titulo, int _duracion,string _genero, double _calificacionPromedio, int _oscares) : Video( _iD, _titulo, _duracion, _genero, _calificacionPromedio){
-    oscares= _oscares;
-}
-
-
-// Métodos de acceso (get)
-int Pelicula::getOscares(){
-    return oscares;
-}
+private:
+    int oscares;
     
+    
+public:
+    
+    // Métodos Constructores
+    Pelicula();
+    Pelicula(string _iD, string _titulo, int _duracion,string _genero, double _calificacionPromedio, int _oscares);
 
-// Otros métodos
-string Pelicula::str(){
-    return iD + ", " + titulo + ", " + to_string(duracion) + ", " + genero + ", " + to_string(calificacionPromedio)+ ", " + to_string(oscares);
-}
+    // Métodos de acceso (sets)
+    void setOscares(int _oscares);
+   
+    // Métodos de acceso (get)
+    int getOscares();
+
+    // Otros métodos
+    string str();
+    
+};
+
+
+
+#endif /* Pelicula_hpp */
