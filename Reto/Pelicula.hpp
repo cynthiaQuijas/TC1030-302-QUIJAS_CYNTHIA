@@ -13,8 +13,7 @@ class Pelicula : public Video {
 
 private:
     int oscares;
-    
-    
+        
 public:
     
     // Métodos Constructores
@@ -31,7 +30,5 @@ public:
     string str();
     
 };
-
-
 
 #endif /* Pelicula_hpp */
