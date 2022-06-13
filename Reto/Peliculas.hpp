@@ -7,37 +7,45 @@
 
 #include <stdio.h>
 #include <iostream>
-#include "Pelicula.hpp"
+#include "Peliculas.hpp"
+#include <sstream>
+#include <fstream>
 
-const int MAX_PEL = 50;
+
+const int MAX_PEL =50;
 
 class Peliculas{
-// Atributos
-private:
-  Pelicula*arrPtrpeliculas[MAX_PEL];
-  int cantidad
+    
+    //Atributos
+    private:
+      // Pelicula * arrPtrPeliculas[MAX_PEL];
+      int cantidad;
+    
+    //Metodos
 
-// Métodos
-public:
-  // Método constructor
-  Peliculas();
-
-  // Métodos Modificadores (SETS)
-  void setPtrPelicula(Pelicula *_pelicula);
-  void setCantidadPeliculas(int _cantidad);
-
-  // Métodos de Acceso (GETS)
-  Pelicula * getPtrPelicula();
-  int getCantidadPeliculas();
+    public:
+      //Metodo construtor
+      Peliculas();
+      Peliculas(string _iD, string _titulo, int _duracion, string _genero, double _calificacionPromedio, int _oscares);
+      
+      //Metodos modificadores(SETS)
+      void setPtrPelicula(Pelicula *_ptrPelicula);
+      void setCantidadPeliculas(int _cantidad);
+      
+      //Metodos de acceso(GETS)
+      Pelicula * getPtrPelicula(string _id);
+      int getCantidadPeliculas();
+      
+      
+      //otros Metodos
+      void leerArchivo();
+      void reporteTodasLasPeliculas();
+      void reporteConCalificacion(double _calificacionPromedio);
+      void reporteGenero(string _genero);
+      
   
-   // Otros métodos
-  void leerAcrhivo();
-  void reporteTodasLasPeliculas();
-  void reporteConCalificacion(double _calificacionPromedio);
-  void reporteGenero(string _genero);
-
-
 };
+
 
 
 #endif /* Peliculas_hpp */
