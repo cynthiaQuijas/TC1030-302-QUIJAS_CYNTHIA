@@ -3,45 +3,27 @@
 // Pelicula.cpp
 
 
+#include "Pelicula.hpp"
+#include"Video.hpp"
 #include <iostream>
-#include "video.hpp"
 
-using namespace std;
-
-Video::Video(string _ID, string _titulo, Duracion _duracion, int _genero, int _calificacion){
-    ID           = _ID;
-    titulo       = _titulo;
-    duracion     = _duracion;
-    genero       = _genero;
-    calificacion = _calificacion;
+// Métodos Constructores (sets)
+Pelicula::Pelicula() : Video(){
+   oscares= 6;
 }
 
-void Video::impGenero(){
-    string genre;
-
-    switch(genero){
-        case 1:
-            genre = "accion";
-            break;
-        case 2:
-            genre = "comedia";
-            break;
-        case 3:
-            genre = "drama";
-            break;
-    }
-
-    cout << genre;
+Pelicula::Pelicula(string _iD, string _titulo, int _duracion,string _genero, double _calificacionPromedio, int _oscares) : Video( _iD, _titulo, _duracion, _genero, _calificacionPromedio){
+    oscares= _oscares;
 }
 
-void Video::mostrar(){
-    cout << "ID: " << ID << endl;
-    cout << "Nombre: " << titulo << endl;
-    cout << "Duracion: "; duracion.impHora();
-    cout << "Genero: "; impGenero(); cout << endl;
-    cout << "Calificacion: " << calificacion << endl;
-}
 
-void Video::calificar(double cal){
-    calificacion = (calificacion+cal)/2;
+// Métodos de acceso (get)
+int Pelicula::getOscares(){
+    return oscares;
+}
+    
+
+// Otros métodos
+string Pelicula::str(){
+    return iD + ", " + titulo + ", " + to_string(duracion) + ", " + genero + ", " + to_string(calificacionPromedio)+ ", " + to_string(oscares);
 }
