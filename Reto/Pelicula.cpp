@@ -3,14 +3,16 @@
 // Pelicula.cpp
 
 
-#include "Pelicula.hpp"
-#include"Video.hpp"
+#include "Pelicula.h"
+#include"Video.h"
 #include <iostream>
 
-// Métodos Constructores (sets)
+// Métodos Constructores
 Pelicula::Pelicula() : Video(){
-   oscares= 6;
+   oscares = 6;
 }
+
+// Método constructor con parámetros
 
 Pelicula::Pelicula(string _iD, string _titulo, int _duracion,string _genero, double _calificacionPromedio, int _oscares) : Video( _iD, _titulo, _duracion, _genero, _calificacionPromedio){
     oscares= _oscares;
