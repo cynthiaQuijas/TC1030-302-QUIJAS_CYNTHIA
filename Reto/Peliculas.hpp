@@ -1,51 +1,43 @@
 // Cynthia Cristal Quijas Flores
 // A01655996
-// Peliculas.hpp
+// Peliculas.h
 
-#ifndef Peliculas_hpp
-#define Peliculas_hpp
+#ifndef Peliculas_h
+#define Peliculas_h
 
 #include <stdio.h>
-#include <iostream>
-#include "Peliculas.hpp"
+#include "Pelicula.h"
 #include <sstream>
 #include <fstream>
-
-
+#include <iostream>
 const int MAX_PEL =50;
 
 class Peliculas{
-    
-    //Atributos
-    private:
-      // Pelicula * arrPtrPeliculas[MAX_PEL];
-      int cantidad;
-    
-    //Metodos
+private:
+  Pelicula * arrPtrPeliculas[MAX_PEL];
+  int cantidad;
 
-    public:
-      //Metodo construtor
-      Peliculas();
-      Peliculas(string _iD, string _titulo, int _duracion, string _genero, double _calificacionPromedio, int _oscares);
-      
-      //Metodos modificadores(SETS)
-      void setPtrPelicula(Pelicula *_ptrPelicula);
-      void setCantidadPeliculas(int _cantidad);
-      
-      //Metodos de acceso(GETS)
-      Pelicula * getPtrPelicula(string _id);
-      int getCantidadPeliculas();
-      
-      
-      //otros Metodos
-      void leerArchivo();
-      void reporteTodasLasPeliculas();
-      void reporteConCalificacion(double _calificacionPromedio);
-      void reporteGenero(string _genero);
-      
+public:
+  // Método construtor
+  Peliculas();
+  Peliculas(string _iD, string _titulo, int _duracion,string _genero, float _calificacionPromedio, int _oscares);
+  
+  // Métodos modificadores (sets)
+  void setPtrPelicula(Pelicula *_ptrPelicula);
+  void setCantidadPeliculas(int _cantidad);
+  
+  // Métodos de acceso (gets)
+  Pelicula * getPtrPelicula(string _id);
+  int getCantidadPeliculas();
+  
+  
+  // Otros métodos
+  int leerArchivo();
+  void reporteTodasLasPeliculas();
+  void reporteConCalificacion(float _calificacionPromedio);
+  void reporteGenero(string _genero);
+  
   
 };
 
-
-
-#endif /* Peliculas_hpp */
+#endif /*Peliculas_h*/
