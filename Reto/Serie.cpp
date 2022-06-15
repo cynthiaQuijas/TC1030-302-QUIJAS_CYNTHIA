@@ -2,7 +2,7 @@
 // A01655996
 // Serie.cpp
 
-#include "Serie.h"
+#include"Serie.h"
 #include"Video.h"
 
 
@@ -12,7 +12,7 @@ Serie::Serie():Video(){
 }
 
 // Método constructor con parámetros
-Serie::Serie(string _iD, string _titulo, int _duracion,string _genero, float _calificacionPromedio, int _cantidad):Video(_iD,_titulo,_duracion,_genero, 0){
+Serie::Serie(string _iD, string _titulo, int _duracion,string _genero, double _calificacionPromedio, int _cantidad):Video(_iD,_titulo,_duracion,_genero, 0){
     cantidad= 0;
 }
 
