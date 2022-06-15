@@ -2,7 +2,7 @@
 // A01655996
 // Video.cpp
 
-#include "Video.hpp"
+#include "Video.h"
 
     // Métodos constructores
 Video::Video(){
