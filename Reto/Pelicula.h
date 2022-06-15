@@ -1,13 +1,13 @@
 // Cynthia Cristal Quijas Flores
 // A01655996
-// Pelicula.hpp
+// Pelicula.h
 
-#ifndef Pelicula_hpp
-#define Pelicula_hpp
+#ifndef Pelicula_h
+#define Pelicula_h
 
 
 #include <stdio.h>
-#include "Video.hpp"
+#include "Video.h"
 
 class Pelicula : public Video {
 
@@ -31,4 +31,4 @@ public:
     
 };
 
-#endif /* Pelicula_hpp */
+#endif /* Pelicula_h */
