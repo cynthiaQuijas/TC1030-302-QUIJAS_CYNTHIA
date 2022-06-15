@@ -2,8 +2,8 @@
 // A01655996
 // Video.hpp
 
-#ifndef Video_hpp
-#define Video_hpp
+#ifndef Video_h
+#define Video_h
 
 
 #include <stdio.h>
@@ -32,7 +32,7 @@ public:
     double getCalificacion();
 
     // Otros métodos
-    string str();
+    virtual string str();
 
 protected:
     string iD;
@@ -43,4 +43,4 @@ protected:
 
 };
 
-#endif /* Video_hpp */ 
+#endif /* Video_h */ 
