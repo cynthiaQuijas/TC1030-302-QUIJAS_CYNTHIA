@@ -6,6 +6,8 @@
 ![](uml.png)
 
 
+# Reflexión final
+
 ¿Qué aprendiste en este curso, con el desarrollo de la situación problema?
 
 Principalmente me sirvió como repaso de la materia POO que se llevó en primer semestre porque si bien hay temas que se
